@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --accent: green;
+    --text: #0e0f19;
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+
+    border-radius: 1e1px;
+    transition: background-color 250ms ease;
+}
+
+li:hover {
+    background-color: #fff6;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    
+    border-radius: 1e1px;
+    border: none;
+
+    
+    background-color: var(--accent);
+    color: white;
+    
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+button:hover {
+    color: green;
+    background-color: white;
+}
+
+body > div {
+    padding: 6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+
+    justify-content: flex-end;
+    padding-block: 2rem;
+
+    font-weight: 300;
+}    
+
+.dropdown {
+    text-overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    margin: 0;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#container {
+    background: url('assets/hero.jpg'), #0006;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    color: white;
+
+    padding-block: 0;
+    min-height: 100svh;
+
+    position: relative;
+}
+
+#container .content {
+    display: grid;
+    justify-items: center;
+
+    margin-inline: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+#container hr {
+    width: 100%;
+}
+
+#container h1 {
+    font-family: inherit;
+    font-size: 5rem;
+    font-weight: 100;
+
+    text-wrap: nowrap;
+
+    text-align: center;
+    line-height: 1;
+}
+
+#container h2 {
+    letter-spacing: 2px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin-block: 0.5rem 2rem;
+}
+
+#container p {
+    margin-block: 1rem;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+
+/* MAIN SECTION */
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    row-gap: 1rem;
+}
+
+#main h2, #main p {
+    grid-column: 1;
+    text-wrap: balance;
+}
+
+#main h2 {
+    font-size: 3.5rem;
+    align-self: end;
+
+    color: var(--accent);
+}
+
+#main > div {
+    --width: 24rem;
+
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    display: flex;
+    overflow-x: auto;
+
+    justify-self: end;
+
+    padding-bottom: 0.5rem;
+
+    width: var(--width);
+    scroll-behavior: smooth;
+}
+
+#main > div .box {
+    flex-shrink: 0;
+    transition: opacity 250ms ease;
+}
+
+#main > div img {
+    height: var(--width);
+    aspect-ratio: 1;
+    cur
+}
+
+#thirdSection {
+    height: 80vh;
+
+    background: url('assets/save-lives.jpg') no-repeat 0 10%, #0006;
+    background-size: cover;
+
+    background-blend-mode: multiply;
+    padding-top: 2rem;
+}
+
+#thirdSection h1 {
+    text-align: center;
+    color: white;
+    font-family: Montserrat;
+
+    font-size: 6rem;
+    font-weight: 900;
+    
+}
+
+#fourthSection img {
+    max-height: 16rem;
+}
+
+
+#footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    gap: 1rem 5rem;
+
+    background-color: #0e0f19;
+    color: white;
+}
+
+#footer p {
+    text-wrap: balance;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+#footer .name {
+    grid-row: 1 / span 3;
+}
+
+#footer .name p {
+    margin-top: 0.5rem;
+}
+
+#footer .logos {
+    user-select: none;
+    font-size: 30px;
+}
+
+.copyright {
+    padding: 0.5rem 0;
+    text-align: center;
+
+    background-color: var(--text);
+    color: white;
+}
